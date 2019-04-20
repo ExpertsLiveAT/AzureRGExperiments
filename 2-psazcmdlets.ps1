@@ -2,7 +2,7 @@
 import-module Az.Resources
 
 (Get-AzResource).count
-Get-AzContext
+Get-AzContext|select Name
 
 Set-AzContext -Subscription 'SMall-VSE'
 (Get-AzResource).count
