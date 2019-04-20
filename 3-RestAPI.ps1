@@ -4,7 +4,7 @@ $loginurl = 'https://login.microsoftonline.com'
 $tokenbody = @{
     grant_type = 'client_credentials'
     client_id = $appid
-    client_secret = $appkey
+    client_secret = $appkeyplain
     resource = 'https://management.azure.com/'
 }
 
