@@ -17,7 +17,7 @@ $iwparam = @{
 
 invoke-webrequest @iwparam -Outvariable oAuth2
 $token = $oauth2.content|convertfrom-JSON
-$sectoken = ConvertTo-SecureString $token -AsPlainText -Force
+
 #endregion
 
 #region List all resources Subscription Big-MAS

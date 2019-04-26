@@ -3,17 +3,18 @@
 # Identify a change
 $ChangeUri = "https://management.azure.com/providers/Microsoft.ResourceGraph/resourceChanges?api-version=2018-09-01-preview"
 
-$Intervalprops = [ordered]@{
-    start = "2019-04-22T00:00:00.000Z"
-    end = "2019-04-22T18:00:00.000Z"
-}
-
 <#
 $Intervalprops = [ordered]@{
-    start = (Get-Date).AddMinutes('-15')
-    end = (Get-Date)
+    start = (Get-Date)
+    end = ((Get-Date).Addhours('-4'))
 }
 #>
+
+
+$Intervalprops = [ordered]@{
+    start = ((Get-Date).AddHours('-4'))
+    end = (Get-Date)
+}
 
 $body = @{
     resourceId = "/subscriptions/98c62a48-2b63-4796-9015-176b9fb173f2/resourceGroups/p-rg-storage/providers/Microsoft.Storage/storageAccounts/computediagnostics"
