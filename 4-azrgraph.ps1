@@ -1,9 +1,10 @@
-# Lets Use PwoerShell for querying
+# Lets Use PowerShell for querying
 import-module az.resourcegraph
 get-command -Module az.resourcegraph
 
 # What do i own ?
-Search-AzGraph -Query 'project id'|ft -AutoSize
+Search-AzGraph -Query 'count'
+Search-AzGraph -Query 'project name,resourceGroup,subscriptionId'|ft -AutoSize
 
 # Amount of Resources
 Search-AzGraph -q "summarize count () by subscriptionId"

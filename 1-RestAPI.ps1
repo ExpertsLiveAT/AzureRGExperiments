@@ -82,5 +82,7 @@ $listparam = @{
 invoke-webrequest @listparam -OutVariable RawRestVMResults
 
 $RestVM = $RawRestVMResults.Content|ConvertFrom-Json
+$restVM.properties.storageProfile.osDisk.osType
+
 #endregion
 
