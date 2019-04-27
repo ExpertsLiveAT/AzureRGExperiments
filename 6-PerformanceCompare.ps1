@@ -18,5 +18,7 @@ Measure-Command -Expression `
     |project name,resourceGroup,type,location,id"}|select Milliseconds
     
 
+$q = "where tags.Owner=~'Roman' | project name,type,resourceGroup"
+Search-AzGraph -Query $q
 
 

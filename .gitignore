@@ -1,1 +1,7 @@
-connect.ps1
+# Presentations
+*.pptx
+*.pdf
+*.vsdx
+
+
+
